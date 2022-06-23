@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model MemberCvCreateDto
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="mt-4">
+        <form asp-action="CreateCV" asp-controller="Member" method="post" class="p-4 w-75 mx-auto">
+            <div class="mb-3">
+                <label class="mb-1">Doğum Tarihi:</label>
+                <input type="date" asp-for="@Model.BirthDate" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="mb-1">Adres:</label>
+                <input type="text" asp-for="@Model.Address" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="mb-1">Mail Adresi:</label>
+                <input type="text" asp-for="@Model.MailAddress" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="mb-1">Telefon Numarası:</label>
+                <input type="text" asp-for="@Model.PhoneNumber" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="mb-1">Mezun Olduğunuz Son Okul:</label>
+                <input type="text" asp-for="@Model.SchoolName" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="mb-1">Son İş Deneyimi:</label>
+                <input type="text" asp-for="@Model.RecentWorkName" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="mb-1">Toplam İş Deneyimi:</label>
+                <input type="number" asp-for="@Model.WorkExperience" class="form-control" />
+            </div>
+            <div class="mb-3 text-end">
+                <button type="submit" class="btn btn-primary">CV Oluştur!</button>
+            </div>
+            <div class="text-danger" asp-validation-summary="All">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

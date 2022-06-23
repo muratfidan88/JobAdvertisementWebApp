@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<CompanyListDto>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @{ if (Model.Count == 0)
+        {
+            <div>
+                <h4>Henüz bir şirket profiliniz bulunmamaktadır.</h4>
+            </div>
+            <div class="mb-3 text-end">
+                <a class="btn btn-primary" asp-action="CreateCompany" role="button">Şirket Profili Oluştur!</a>
+            </div>
+        }
+        else
+        {
+            int i = 0;
+            foreach (var item in Model)
+            {
+
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_@i" aria-expanded="false" aria-controls="collapse_@i">
+                                <strong>@item.Name</strong>
+                            </button>
+                        </h2>
+                        <div id="collapse_@i" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div>
+                                    <strong>Şirket Tanımı : </strong>@item.Defination
+                                </div>
+                                <div class="mb-3 mb-1">
+                                    <strong>Şirket adresi :</strong> @item.Address
+                                </div>
+                                
+                                <div class="mb-3 mt-3 text-end">
+                                    <a class="btn btn-primary" asp-action="UpdateCompany" asp-route-id="@item.Id" role="button">Şirket Profili Güncelle!</a>
+                                    <a class="btn btn-primary" asp-action="DeleteCompany" asp-route-id="@item.Id" role="button">Şirket Profili Sil!</a>
+                                    <a class="btn btn-primary" asp-action="GetAdvertisement" asp-route-id="@item.Id" role="button">Şirkete Ait Yayındaki İlanları Görüntüle!</a>
+                                    <a class="btn btn-primary" asp-action="GetAdvertisementDisable" asp-route-id="@item.Id" role="button">Şirkete Ait Yayından Kaldırılmış İlanları Görüntüle!</a>
+                                    <a class="btn btn-primary" asp-action="CreateAdvertisement" asp-route-companyId="@item.Id" role="button">İlan Oluştur!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                i++;
+            }
+
+        }
+        <div class="mb-3 mt-3 text-end">
+            <a class="btn btn-primary" asp-action="CreateCompany" role="button">Yeni Şirket Profili Ekle!</a>
+        </div>
+    }
+
+
+</body>
+</html>

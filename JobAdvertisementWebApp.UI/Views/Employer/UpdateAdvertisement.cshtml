@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model AdvertisementUpdateDto
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="mt-4">
+        <form asp-action="UpdateAdvertisement" asp-controller="Employer" method="post" class="p-4 w-75 mx-auto">
+            <div class="mb-3">
+                <label class="mb-1">İlan Başlığı:</label>
+                <input type="text" asp-for="@Model.Title" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="mb-1">İlan Açıklaması:</label>
+                <input type="text" asp-for="@Model.Defination" class="form-control" />
+            </div>
+            <input type="hidden" asp-for="@Model.CompanyId" class="form-control" />
+            <input type="hidden" asp-for="@Model.CompanyName" class="form-control" />
+            <input type="hidden" asp-for="@Model.CreaatedDate" class="form-control" />
+            <input type="hidden" asp-for="@Model.IsActive" class="form-control" />
+            <div class="mb-3 text-end">
+                <button type="submit" class="btn btn-primary">İlanı Güncelle!</button>
+            </div>
+            <div class="text-danger" asp-validation-summary="All">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

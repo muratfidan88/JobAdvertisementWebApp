@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.0.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JobAdvertisementWebApp.Common\JobAdvertisementWebApp.Common.csproj" />
+    <ProjectReference Include="..\JobAdvertisementWebApp.DAL\JobAdvertisementWebApp.DAL.csproj" />
+    <ProjectReference Include="..\JobAdvertisementWebApp.DTOs\JobAdvertisementWebApp.DTOs.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model MemberCvListDto
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <h4>CV</h4>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>Ad:</td>
+                    <td>@Model.Name</td>
+                </tr>
+                <tr>
+                    <td>Soyad:</td>
+                    <td>@Model.LastName</td>
+                </tr>
+                <tr>
+                    <td>Doğum Tarihi:</td>
+                    <td>@Model.BirthDate</td>
+                </tr>
+                <tr>
+                    <td>Adres:</td>
+                    <td>@Model.Address</td>
+                </tr>
+                <tr>
+                    <td>Son Mezun Olunan Okul:</td>
+                    <td>@Model.SchoolName</td>
+                </tr>
+                <tr>
+                    <td>Son Çalışılan İş:</td>
+                    <td>@Model.RecentWorkName</td>
+                </tr>
+                <tr>
+                    <td>Toplam İş Deneyimi:</td>
+                    <td>@Model.WorkExperience</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    @*<div class="container mb-3 text-end">
+        <a class="btn btn-primary" asp-action="UpdateCV" asp-route-id="@Model.Id" role="button">CV Güncelle!</a>
+        <a class="btn btn-primary" asp-action="DeleteCV" asp-route-id="@Model.Id" role="button">CV Sil!</a>
+    </div>
+    <div class="container mb-3 text-end">
+        <a class="btn btn-primary" asp-action="GetUserAppliedAdvertisement" role="button">Başvurularını Görüntüle!</a>
+        <a class="btn btn-primary" asp-action="GetAdvertisement" role="button">İlanları Görüntüle!</a>
+    </div>*@
+</body>
+</html>
