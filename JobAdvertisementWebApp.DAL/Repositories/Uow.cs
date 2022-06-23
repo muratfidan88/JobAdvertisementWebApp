@@ -1,9 +1,5 @@
 ﻿using JobAdvertisementWebApp.DAL.Data.Contexts;
 using JobAdvertisementWebApp.DAL.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace JobAdvertisementWebApp.DAL.Repositories

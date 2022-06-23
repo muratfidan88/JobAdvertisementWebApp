@@ -14,7 +14,6 @@ using JobAdvertisementWebApp.DAL.Repositories;
 using JobAdvertisementWebApp.DTOs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace JobAdvertisementWebApp.BLL.DependencyResolver
 {
